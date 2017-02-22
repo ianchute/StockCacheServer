@@ -4,7 +4,7 @@ const port = process.env.PORT || 3000;
 
 const requestHandler = (request, response) => {  
 
-  response.setHeader('Access-Control-Allow-Origin', 'stock-cache.herokuapp.com');
+  response.setHeader('Access-Control-Allow-Origin', 'https://stock-cache.herokuapp.com');
 	response.setHeader('Access-Control-Request-Method', '*');
 	response.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
 	response.setHeader('Access-Control-Allow-Headers', '*');
