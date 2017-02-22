@@ -1,6 +1,6 @@
 const http = require('http')  
 const client = require('request')  
-const port = 80
+const port = process.env.PORT || 3000;
 
 const requestHandler = (request, response) => {  
 
