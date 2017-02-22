@@ -12,8 +12,14 @@ const requestHandler = (request, response) => {
   if (request.url.indexOf('favicon') === -1) {
     client('http://api.manilainvestor.com/v1/stocks/hdata' + request.url,
     function(error, rs, body) {
-      response.end(body);
+      if (error) {
+        response.end(error);
+      } else {
+        response.end(body);
+      }
     });
+  } else {
+    response.end('');
   }
 }
 
